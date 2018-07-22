@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body * {
+    border: 1px solid pink;
+}
+
+.red {
+    color: red;
+}
+
+div.wrapper{
+    padding: 0 20px;
+}
+
+div.function_block{
+    border-bottom: 2px solid black;
+    padding: 20px 0;
+    width: 800px;
+}
+
+div.function_block h1{
+    font-size: 40px;
+    margin-bottom: 10px;
+    padding: 10px, 0;
+    text-align: center;
+}
+
+div.function_block button{
+    padding: 10px;
+}
+
+div.function_block p{
+    display: inline-block;
+    margin-left: 20px;
+}

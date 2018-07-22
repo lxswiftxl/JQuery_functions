@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Jquery Functions</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="addclass" class="function_block">
+            <h1>AddClass</h1>
+            <button>AddClass</button>
+            <p>Click the button to add class 'red' to this paragraph</p>
+        </div>
+        <div id="slidetoggle" class="function_block">
+            <h1>SlideToggle</h1>
+            <button>slidetoggle</button>
+            <p>Click the button to slidetoggle hidding the paragraph.</p>
+        </div>
+        <div id="append" class="function_block">
+            <h1>append</h1>
+            <button>append</button>
+            <p>Click the button to append a new paragraph</p>
+        </div>
+    </div>
+    <script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script>
+        $('button').click(function(){
+            console.dir($(this));
+            console.dir($(this).parent());
+            var id = $(this).parent().attr('id');
+            console.log(id);
+
+            /* Us the id of the parent of the element that generated the event to determine which code to run. */ 
+            var selector = '#' + id + ' ' + 'p';
+            switch(id) {
+                case 'addclass':
+                    /* Add class red to all paragraphs under element with the id */
+                    $(selector).addClass('red');
+                    break;
+                
+                case 'slidetoggle':
+                    $(selector).slideToggle();
+                    break;
+
+                case 'append':
+                    $(selector).append('I am appeneding things!');
+                    break;
+
+                default:
+                    console.log('id of click did not match any cases.');
+            }
+        })
+    </script>
+</body>
+</html>
